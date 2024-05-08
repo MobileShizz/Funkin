@@ -68,10 +68,6 @@ jobs:
         env:
           ANDROID_NDK_HOME: ${{ steps.setup-ndk.outputs.ndk-path }}
 
-      - name: Rebuild Lime for Android
-        run: |
-          haxelib run lime rebuild android
-
       - name: Get and update GLIBC
         run: |
           wget -4c https://ftp.gnu.org/gnu/glibc/glibc-2.38.tar.gz
