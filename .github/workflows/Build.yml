@@ -72,8 +72,10 @@ jobs:
         run: |
           wget -4c https://ftp.gnu.org/gnu/glibc/glibc-2.38.tar.gz
           tar -zxvf glibc-2.38.tar.gz
-          cd glibc-2.38
-          ./configure --prefix=/opt/glibc
+          cd ..
+          mkdir glibcb
+          cd glibcb
+          ../glibc-2.38/configure --prefix=/opt/glibc
           make
           make install
 
