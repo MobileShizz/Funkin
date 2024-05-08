@@ -70,11 +70,11 @@ jobs:
 
       - name: Get and update GLIBC
         run: |
+          mkdir swagshit && cd swagshit
           wget -4c https://ftp.gnu.org/gnu/glibc/glibc-2.38.tar.gz
-          tar -zxvf glibc-2.38.tar.gz
+          tar -xvzf glibc-2.38.tar.gz -C glibc-2.38
           cd ..
-          mkdir glibcb
-          cd glibcb
+          mkdir glibcb && cd glibcb
           ../glibc-2.38/configure --prefix=/opt/glibc
           make
           make install
