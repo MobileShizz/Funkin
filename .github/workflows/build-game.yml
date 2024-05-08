@@ -2,7 +2,6 @@ name: Build and Upload nightly game builds
 
 on:
   workflow_dispatch:
-  push:
     paths-ignore:
     - '**/Dockerfile'
     - '.github/workflows/build-docker-image.yml'
