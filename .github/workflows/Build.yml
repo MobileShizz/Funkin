@@ -56,7 +56,6 @@ jobs:
           git submodule update --init --recursive
           haxelib --global install hmm
           haxelib run hmm install
-          haxelib set lime 7.9.0
           haxelib list
 
       - name: Configure Android
@@ -68,6 +67,10 @@ jobs:
           haxelib run lime config ANDROID_SETUP true
         env:
           ANDROID_NDK_HOME: ${{ steps.setup-ndk.outputs.ndk-path }}
+
+      - name: Rebuild Lime for Android
+        run: |
+          haxelib run lime rebuild android
 
       - name: Build Game
         run: |

@@ -108,8 +108,10 @@
     },
     {
       "name": "lime",
-      "type": "haxelib",
-      "version": "7.9.0"
+      "type": "git",
+      "dir": null,
+      "ref": "872ff6db2f2d27c0243d4ff76802121ded550dd7",
+      "url": "https://github.com/FunkinCrew/lime"
     },
     {
       "name": "mconsole",
