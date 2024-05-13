@@ -68,13 +68,6 @@ jobs:
         env:
           ANDROID_NDK_HOME: ${{ steps.setup-ndk.outputs.ndk-path }}
 
-      - name: Get and update GLIBC
-        run: |
-          cd gitpodspecifcs
-          cd buildshit
-          make
-          make install
-
       - name: Build Game
         run: |
           haxelib run lime build android
